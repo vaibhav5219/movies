@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Movies.Models.Movie>
+
+@{ ViewBag.Title = "Movies";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+<h2>Movies List For Guest</h2>
+
+<table id="movies" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Movie Details </th>
+            <th>Movie Edit</th>
+            <th>Number In Stocks</th>
+            <th>Release Date</th>
+        </tr>
+    </thead>
+        <tbody>
+            @foreach (var movie in Model)
+             {
+                <tr>
+                    <td>@movie.Name</td>
+                    <td>@movie.Name</td>
+                    <td>@movie.NumberInStock</td>
+                    <td>@movie.ReleaseDate</td>
+                    
+                </tr>
+            }
+        <tbody/>
+</table>
